@@ -20,12 +20,10 @@ function calculateDiscount(cartTotal) {
 
 /**
  * Calculate final price after discount
- * BUG: Adds discount instead of subtracting it!
  */
 function calculateFinalPrice(cartTotal) {
   const discount = calculateDiscount(cartTotal);
-  // BUG: Should be cartTotal - discount
-  return cartTotal + discount;
+  return cartTotal - discount;
 }
 
 // API Endpoints
